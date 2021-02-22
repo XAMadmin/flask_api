@@ -1,0 +1,323 @@
+INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 16:06:35] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 16:06:36] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 16:15:13] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 16:15:13] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 16:20:59] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 16:20:59] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:08:52] "[33mGET / HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:08:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:09:04] "[33mGET /strore/info HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:09:13] "[33mGET /store/info HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:09:44] "[33mGET /store_info HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:09:47] "[33mGET /store_info HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:09:47] "[33mGET /store_info HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:09:48] "[33mGET /store_info HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:09:48] "[33mGET /store_info HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:09:49] "[33mGET /store_info HTTP/1.1[0m" 404 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:09:54] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:10:20] "[31m[1mGET /api/v1.0/store_info HTTP/1.1[0m" 405 -
+INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1892 Exception on /api/v1.0/store_info [POST]
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 636, in pymssql.connect
+  File "src\_mssql.pyx", line 1964, in _mssql.connect
+  File "src\_mssql.pyx", line 682, in _mssql.MSSQLConnection.__init__
+  File "src\_mssql.pyx", line 1690, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (18456, b"\xe7\x94\xa8\xe6\x88\xb7 'sa' \xe7\x99\xbb\xe5\xbd\x95\xe5\xa4\xb1\xe8\xb4\xa5\xe3\x80\x82DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 508, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "src\pymssql.pyx", line 642, in pymssql.connect
+pymssql.OperationalError: (18456, b"\xe7\x94\xa8\xe6\x88\xb7 'sa' \xe7\x99\xbb\xe5\xbd\x95\xe5\xa4\xb1\xe8\xb4\xa5\xe3\x80\x82DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\n")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\workspace\MandixinInterface\MindxServer\api_1_0\get_store.py", line 42, in store_hz
+    result = session.query(MdxStore).filter(MdxStore.djbh==djbh).first()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3203, in __getitem__
+    return list(res)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3557, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3572, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3550, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1145, in connection
+    execution_options=execution_options,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1151, in _connection_for_bind
+    engine, execution_options
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2302, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2340, in _wrap_pool_connect
+    e, dialect, self
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1584, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 508, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "src\pymssql.pyx", line 642, in pymssql.connect
+sqlalchemy.exc.OperationalError: (pymssql.OperationalError) (18456, b"\xe7\x94\xa8\xe6\x88\xb7 'sa' \xe7\x99\xbb\xe5\xbd\x95\xe5\xa4\xb1\xe8\xb4\xa5\xe3\x80\x82DB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\n")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:26:58] "[35m[1mPOST /api/v1.0/store_info HTTP/1.1[0m" 500 -
+ERROR app.py:1892 Exception on /api/v1.0/store_info [POST]
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 636, in pymssql.connect
+  File "src\_mssql.pyx", line 1964, in _mssql.connect
+  File "src\_mssql.pyx", line 682, in _mssql.MSSQLConnection.__init__
+  File "src\_mssql.pyx", line 1690, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (18456, b'DB-Lib error message 20018, severity 11:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 508, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "src\pymssql.pyx", line 642, in pymssql.connect
+pymssql.OperationalError: (18456, b'DB-Lib error message 20018, severity 11:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\n')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\workspace\MandixinInterface\MindxServer\api_1_0\get_store.py", line 42, in store_hz
+    result = session.query(MdxStore).filter(MdxStore.djbh==djbh).first()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3203, in __getitem__
+    return list(res)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3557, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3572, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 3550, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1145, in connection
+    execution_options=execution_options,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1151, in _connection_for_bind
+    engine, execution_options
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2302, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2340, in _wrap_pool_connect
+    e, dialect, self
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1584, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 508, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "src\pymssql.pyx", line 642, in pymssql.connect
+sqlalchemy.exc.OperationalError: (pymssql.OperationalError) (18456, b'DB-Lib error message 20018, severity 11:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20018, severity 14:\nGeneral SQL Server error: Check messages from the SQL Server\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\nDB-Lib error message 20002, severity 9:\nAdaptive Server connection failed (172.16.214.250)\n')
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:27:26] "[35m[1mPOST /api/v1.0/store_info HTTP/1.1[0m" 500 -
+INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:113 127.0.0.1 - - [20/Feb/2021 17:27:36] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:113 127.0.0.1 - - [22/Feb/2021 16:17:34] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+ERROR app.py:1892 Exception on /api/v1.0/store_info [POST]
+Traceback (most recent call last):
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\workspace\MandixinInterface\MindxServer\api_1_0\get_store.py", line 34, in store_hz
+    current_app.logger.error("·þÎñÆ÷Òì³££¡Òì³£ÐÅÏ¢£º{}".format(e))
+UnboundLocalError: local variable 'e' referenced before assignment
+INFO _internal.py:113 127.0.0.1 - - [22/Feb/2021 16:17:56] "[35m[1mPOST /api/v1.0/store_info HTTP/1.1[0m" 500 -
+ERROR app.py:1892 Exception on /api/v1.0/store_info [POST]
+Traceback (most recent call last):
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\workspace\MandixinInterface\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\workspace\MandixinInterface\MindxServer\api_1_0\get_store.py", line 34, in store_hz
+    current_app.logger.error("ÇëÇó²ÎÊý´íÎó£¡")
+UnboundLocalError: local variable 'e' referenced before assignment
+INFO _internal.py:113 127.0.0.1 - - [22/Feb/2021 16:19:02] "[35m[1mPOST /api/v1.0/store_info HTTP/1.1[0m" 500 -
+INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR get_store.py:34 ÇëÇó²ÎÊý´íÎó£¡
+INFO _internal.py:113 127.0.0.1 - - [22/Feb/2021 16:19:54] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:113 127.0.0.1 - - [22/Feb/2021 16:20:39] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113 127.0.0.1 - - [22/Feb/2021 16:21:04] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113 127.0.0.1 - - [22/Feb/2021 16:21:33] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
+INFO _internal.py:113 127.0.0.1 - - [22/Feb/2021 16:38:06] "[31m[1mPOST /api/v1.0/store_info HTTP/1.1[0m" 400 -
+ERROR get_store.py:34 ÇëÇó²ÎÊý´íÎó£¡
+INFO _internal.py:113 127.0.0.1 - - [22/Feb/2021 16:38:11] "[37mPOST /api/v1.0/store_info HTTP/1.1[0m" 200 -
